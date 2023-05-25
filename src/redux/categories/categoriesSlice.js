@@ -16,10 +16,9 @@ export const getCategories = createAsyncThunk('category/getCategories', async ()
       },
     };
 
-    const url = 'https://fia-formula-1-championship-statistics.p.rapidapi.com/api/teams/';
+    const url = 'https://fia-formula-1-championship-statistics.p.rapidapi.com/api/drivers/';
 
     const resp = await axios.get(url, config);
-    console.log(resp);
     return resp.data;
   } catch (error) {
     return error;
