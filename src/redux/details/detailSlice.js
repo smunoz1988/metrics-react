@@ -7,7 +7,7 @@ const initialState = {
   error: '',
 };
 
-export const getDetails = createAsyncThunk('category/getCategories', async (driver) => {
+export const getDetails = createAsyncThunk('detail/getDetails', async () => {
   try {
     const config = {
       headers: {
@@ -16,7 +16,7 @@ export const getDetails = createAsyncThunk('category/getCategories', async (driv
       },
     };
 
-    const url = `https://fia-formula-1-championship-statistics.p.rapidapi.com/api/drivers/detaills${driver}`;
+    const url = 'https://fia-formula-1-championship-statistics.p.rapidapi.com/api/drivers/details/maxverstappen';
 
     const resp = await axios.get(url, config);
     return resp.data;
@@ -25,7 +25,7 @@ export const getDetails = createAsyncThunk('category/getCategories', async (driv
   }
 });
 
-const detailsSlice = createSlice({
+const detailSlice = createSlice({
   name: 'detail',
   initialState,
   reducers: {
@@ -48,4 +48,4 @@ const detailsSlice = createSlice({
   },
 });
 
-export default detailsSlice.reducer;
+export default detailSlice.reducer;
