@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import Detail from '../routes/Detail';
+import Detail from '../routes/detail.js';
 import { getDetails } from '../redux/details/detailSlice';
 
 jest.mock('react-redux', () => ({
