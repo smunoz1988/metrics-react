@@ -41,8 +41,10 @@ const Categories = () => {
   return (
     <>
       <div className="header">
-        <IoIosArrowBack />
-        <p>2022</p>
+        <div className="flexRow">
+          <IoIosArrowBack />
+          <p>2022</p>
+        </div>
         <p>Driver Standings</p>
         <div>
           <IoMdMic />
