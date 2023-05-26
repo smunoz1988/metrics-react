@@ -27,6 +27,7 @@ const Detail = () => {
       <button type="button" onClick={returntoDrivers}>camisa</button>
       <ul>
         <li>{driverInfo.team}</li>
+        <li>{driverInfo.team}</li>
       </ul>
     </>
   );
