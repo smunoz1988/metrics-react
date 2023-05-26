@@ -1,4 +1,6 @@
+import { IoIosArrowBack, IoMdMic } from 'react-icons/io';
 import { FaBeer } from 'react-icons/fa';
+import { AiTwotoneSetting } from 'react-icons/ai';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -32,7 +34,9 @@ const Detail = () => {
     return (
       <>
         <div className="header">
-          <button type="button" onClick={returntoDrivers}>X</button>
+          <button className="backButton" type="button" onClick={returntoDrivers}>
+            <IoIosArrowBack />
+          </button>
           <p>Driver Standings</p>
           <div>
             <FaBeer />
@@ -46,12 +50,14 @@ const Detail = () => {
 
   return (
     <>
-      <div className="header">
-        <button type="button" onClick={returntoDrivers}>X</button>
+      <div className="top">
+        <button className="backButton" type="button" onClick={returntoDrivers}>
+          <IoIosArrowBack />
+        </button>
         <p>Driver Details</p>
         <div>
-          <FaBeer />
-          <FaBeer />
+          <IoMdMic />
+          <AiTwotoneSetting className="setupWheel" />
         </div>
       </div>
       <div>
