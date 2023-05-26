@@ -30,7 +30,7 @@
 
 # 📖 Metrics-F1 Driver Stats <a name="about-project"></a>
 
-> In this project, I build a F1 Driver Stats app using react and redux.
+> In this project, I build a F1 Driver Stats app using react and redux. The app style is based on the Original design idea by Nelson Sakwa on Behance
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -149,6 +149,13 @@ Deploy soon
 - GitHub: [@smunoz](https://github.com/smunoz1988)
 - Twitter: [@twitterhandle](https://twitter.com/Santiag24209785)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/santiago-munoz-0b2b1a260)
+
+App design by:
+
+👤 Nelson Sakwa.
+
+- Behance: https://www.behance.net/sakwadesignstudio
+- Original Design: https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
