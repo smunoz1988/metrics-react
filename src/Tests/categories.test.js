@@ -31,13 +31,17 @@ describe('Categories Component', () => {
     const dispatchMock = jest.fn();
     const navigateMock = jest.fn();
     const drivers = [
-      { firstname: 'Lewis', lastname: 'Hamilton', rank: 1, points: 100 },
-      { firstname: 'Max', lastname: 'Verstappen', rank: 2, points: 90 },
+      {
+        firstname: 'Lewis', lastname: 'Hamilton', rank: 1, points: 100,
+      },
+      {
+        firstname: 'Max', lastname: 'Verstappen', rank: 2, points: 90,
+      },
     ];
     useSelector.mockImplementation((selector) => selector({
       category: {
         categories: {
-          drivers: drivers,
+          drivers,
         },
       },
     }));
