@@ -37,7 +37,6 @@ const Categories = () => {
     return lowercaseFirstName.includes(lowercaseFilter) || lowercaseLastName.includes(lowercaseFilter);
   });
 
-  console.log(driversData);
   return (
     <>
       <div className="header">

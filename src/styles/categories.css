@@ -16,3 +16,10 @@ input {
   border: solid 0.05rem black;
   padding-left: 0.5rem;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem;
+}

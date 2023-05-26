@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { getDetails } from '../redux/details/detailSlice';
+import '../styles/detail.css';
 
 const Detail = () => {
   const dispatch = useDispatch();
