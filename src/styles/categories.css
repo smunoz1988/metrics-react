@@ -66,6 +66,7 @@ input {
   justify-content: space-between;
   align-items: center;
   background-color: #ec4c8a;
+  padding: 0 0.8rem;
 }
 
 .setupWheel {
