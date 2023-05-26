@@ -3,6 +3,13 @@
   align-items: center;
 }
 
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 0.5rem 0.1rem 0 0;
+}
+
 .cardsContainer {
   display: grid;
   grid-template-columns: auto auto;
@@ -11,6 +18,9 @@
 .driverContainer {
   text-align: center;
   border: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgb(104, 102, 102) 0.5px, transparent 0);
+  background-size: 5px 5px;
+  padding-bottom: 1rem;
 }
 
 .driverContainer:nth-child(1), 
@@ -56,4 +66,23 @@ input {
   justify-content: space-between;
   align-items: center;
   background-color: #ec4c8a;
+}
+
+.setupWheel {
+  padding-left: 1rem;
+}
+
+.helmetDrivers {
+  font-size: 4.5rem;
+  filter: brightness(35%);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1rem; 
+}
+
+.driverInfo {
+  text-align: end;
+  margin: 0 0.5rem 0 0;
 }

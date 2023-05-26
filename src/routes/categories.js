@@ -1,9 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { TbHelmet } from 'react-icons/tb';
+import { GiFullMotorcycleHelmet } from 'react-icons/gi';
 import { IoIosArrowBack, IoMdMic } from 'react-icons/io';
 import { AiTwotoneSetting } from 'react-icons/ai';
+import { BsArrowRightCircle } from 'react-icons/bs';
 import { getCategories } from '../redux/categories/categoriesSlice';
 import '../styles/categories.css';
 
@@ -48,17 +49,20 @@ const Categories = () => {
         <p>Driver Standings</p>
         <div>
           <IoMdMic />
-          <AiTwotoneSetting />
+          <AiTwotoneSetting className="setupWheel" />
         </div>
       </div>
       <input placeholder="Search driver.." onChange={handleChange} />
       <div className="cardsContainer">
         {filteredDrivers.map((driver) => (
           <button className="driverContainer" key={driver.rank} type="button" onClick={() => handleClickItem(`${driver.firstname}${driver.lastname}`)}>
-            <TbHelmet />
-            <p>{`${driver.firstname} ${driver.lastname}`}</p>
-            <p>{`Rank: ${driver.rank}`}</p>
-            <p>{`Points: ${driver.points}`}</p>
+            <div className="flexColumn">
+              <BsArrowRightCircle />
+            </div>
+            <GiFullMotorcycleHelmet className="helmetDrivers" />
+            <h3 className="driverInfo">{`${driver.firstname} ${driver.lastname}`}</h3>
+            <p className="driverInfo">{`Rank: ${driver.rank}`}</p>
+            <p className="driverInfo">{`Points: ${driver.points}`}</p>
           </button>
         ))}
       </div>
