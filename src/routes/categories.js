@@ -2,7 +2,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TbHelmet } from 'react-icons/tb';
-import { FaBeer } from 'react-icons/fa';
+import { IoIosArrowBack, IoMdMic } from 'react-icons/io';
+import { AiTwotoneSetting } from 'react-icons/ai';
 import { getCategories } from '../redux/categories/categoriesSlice';
 import '../styles/categories.css';
 
@@ -40,11 +41,12 @@ const Categories = () => {
   return (
     <>
       <div className="header">
+        <IoIosArrowBack />
         <p>2022</p>
         <p>Driver Standings</p>
         <div>
-          <FaBeer />
-          <FaBeer />
+          <IoMdMic />
+          <AiTwotoneSetting />
         </div>
       </div>
       <input placeholder="Search driver.." onChange={handleChange} />

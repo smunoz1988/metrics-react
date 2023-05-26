@@ -1,6 +1,6 @@
 import { FaBeer } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { getDetails } from '../redux/details/detailSlice';
 import '../styles/detail.css';
@@ -10,6 +10,7 @@ const Detail = () => {
   const navigate = useNavigate();
   const driverInfo = useSelector((store) => store.detail?.details?.driverDetails);
   const { driverId } = useParams();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     dispatch(getDetails(driverId));
@@ -19,15 +20,35 @@ const Detail = () => {
     navigate('/Drivers');
   };
 
-  if (!driverInfo) {
-    return <div>Loading...</div>;
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setIsLoading(false); // Update the loading state after the delay
+    }, 1500); // Set the desired delay in milliseconds
+
+    return () => clearTimeout(delay); // Cleanup the timer if the component unmounts
+  }, []);
+
+  if (isLoading) {
+    return (
+      <>
+        <div className="header">
+          <button type="button" onClick={returntoDrivers}>X</button>
+          <p>Driver Standings</p>
+          <div>
+            <FaBeer />
+            <FaBeer />
+          </div>
+        </div>
+        <div>Loading...</div>
+      </>
+    );
   }
 
   return (
     <>
       <div className="header">
         <button type="button" onClick={returntoDrivers}>X</button>
-        <p>Driver Standings</p>
+        <p>Driver Details</p>
         <div>
           <FaBeer />
           <FaBeer />

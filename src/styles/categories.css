@@ -4,8 +4,34 @@
 }
 
 .driverContainer {
-  border: solid black 0.1rem;
   text-align: center;
+  border: 0;
+}
+
+.driverContainer:nth-child(1), 
+.driverContainer:nth-child(4),
+.driverContainer:nth-child(5),
+.driverContainer:nth-child(8),
+.driverContainer:nth-child(9),
+.driverContainer:nth-child(12),
+.driverContainer:nth-child(13),
+.driverContainer:nth-child(16),
+.driverContainer:nth-child(17),
+.driverContainer:nth-child(20) {
+  background-color: #ec4c8a;
+}
+
+.driverContainer:nth-child(2), 
+.driverContainer:nth-child(3),
+.driverContainer:nth-child(6),
+.driverContainer:nth-child(7),
+.driverContainer:nth-child(10),
+.driverContainer:nth-child(11),
+.driverContainer:nth-child(14),
+.driverContainer:nth-child(15),
+.driverContainer:nth-child(18),
+.driverContainer:nth-child(19) {
+  background-color: #d04278;
 }
 
 input {
@@ -13,13 +39,16 @@ input {
   height: 2rem;
   margin: auto;
   margin-bottom: 0.5rem;
-  border: solid 0.05rem black;
-  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+  border: solid 0.05rem #ec4c8a;
+  padding: 0.3rem 1.5rem;
+  border-radius: 1rem;
+  color: #ec4c8a;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0.5rem;
+  background-color: #ec4c8a;
 }
