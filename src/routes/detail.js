@@ -69,7 +69,7 @@ const Detail = () => {
         <GiFullMotorcycleHelmet className="helmetDriversDetail" />
         <div className="nameDataDriver">
           <h2 className="driverTopData">{`${driverInfo.firstname} ${driverInfo.lastname}`}</h2>
-          <p className="driverTopData">{`Points: ${driverInfo.points}`}</p>
+          <p className="driverTopData">{`Total Career Points: ${driverInfo.points}`}</p>
         </div>
       </div>
       <p className="statsTitle">DRIVER STATS</p>
