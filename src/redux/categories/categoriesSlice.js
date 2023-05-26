@@ -11,7 +11,7 @@ export const getCategories = createAsyncThunk('category/getCategories', async ()
   try {
     const config = {
       headers: {
-        'X-RapidAPI-Key': '813398e5bcmsh991821b7dd7c8acp1c46c0jsn08219d1a1e17',
+        'X-RapidAPI-Key': '595740a7f5mshc92914bbcf4727fp18322djsnaf6c8af4b471',
         'X-RapidAPI-Host': 'fia-formula-1-championship-statistics.p.rapidapi.com',
       },
     };
