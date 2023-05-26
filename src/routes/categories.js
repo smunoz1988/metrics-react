@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TbHelmet } from 'react-icons/tb';
+import { FaBeer } from 'react-icons/fa';
 import { getCategories } from '../redux/categories/categoriesSlice';
 import '../styles/categories.css';
 
@@ -36,8 +37,17 @@ const Categories = () => {
     return lowercaseFirstName.includes(lowercaseFilter) || lowercaseLastName.includes(lowercaseFilter);
   });
 
+  console.log(driversData);
   return (
     <>
+      <div className="header">
+        <p>2022</p>
+        <p>Driver Standings</p>
+        <div>
+          <FaBeer />
+          <FaBeer />
+        </div>
+      </div>
       <input placeholder="Search driver.." onChange={handleChange} />
       <div className="cardsContainer">
         {filteredDrivers.map((driver) => (
