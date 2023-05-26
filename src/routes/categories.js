@@ -1,11 +1,13 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { TbHelmet } from 'react-icons/tb';
 import { getCategories } from '../redux/categories/categoriesSlice';
 import '../styles/categories.css';
 
 const Categories = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const driversData = useSelector((store) => store.category?.categories?.drivers);
   const [filterDrivers, setFilterDrivers] = useState('');
 
@@ -20,6 +22,7 @@ const Categories = () => {
 
   const handleClickItem = (item) => {
     console.log(item);
+    navigate('/Details');
   };
 
   if (!driversData) {

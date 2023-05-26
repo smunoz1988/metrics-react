@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="Drivers" element={<Categories />} />
-        <Route path="Detail" element={<Detail />} />
+        <Route path="Details" element={<Detail />} />
         <Route path="/" element={<Navigate to="/Drivers" />} />
       </Routes>
     </>
