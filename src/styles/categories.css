@@ -7,3 +7,12 @@
   border: solid black 0.1rem;
   text-align: center;
 }
+
+input {
+  width: 80%;
+  height: 2rem;
+  margin: auto;
+  margin-bottom: 0.5rem;
+  border: solid 0.05rem black;
+  padding-left: 0.5rem;
+}
