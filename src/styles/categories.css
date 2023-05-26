@@ -23,7 +23,7 @@
   padding-bottom: 1rem;
 }
 
-.driverContainer:nth-child(1), 
+.driverContainer:nth-child(1),
 .driverContainer:nth-child(4),
 .driverContainer:nth-child(5),
 .driverContainer:nth-child(8),
@@ -36,7 +36,7 @@
   background-color: #ec4c8a;
 }
 
-.driverContainer:nth-child(2), 
+.driverContainer:nth-child(2),
 .driverContainer:nth-child(3),
 .driverContainer:nth-child(6),
 .driverContainer:nth-child(7),
@@ -80,7 +80,7 @@ input {
 }
 
 h3 {
-  font-size: 1rem; 
+  font-size: 1rem;
 }
 
 .driverInfo {
