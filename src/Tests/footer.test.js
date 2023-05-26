@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'; // eslint-disable-line
 
 describe('Footer', () => {
   test('renders the footer text correctly', () => {
