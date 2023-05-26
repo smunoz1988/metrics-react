@@ -1,12 +1,18 @@
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './Components/Header';
 import Categories from './routes/categories';
+import Detail from './routes/Detail';
 
 function App() {
   return (
     <>
       <Header />
-      <Categories />
+      <Routes>
+        <Route path="Drivers" element={<Categories />} />
+        <Route path="Detail" element={<Detail />} />
+        <Route path="/" element={<Navigate to="/Drivers" />} />
+      </Routes>
     </>
   );
 }
