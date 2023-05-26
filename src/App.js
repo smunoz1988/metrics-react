@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Categories from './routes/categories';
-import Detail from './routes/Detail';
+import Detail from './routes/Detail.js';
 
 function App() {
   return (
