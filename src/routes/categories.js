@@ -18,6 +18,10 @@ const Categories = () => {
     setFilterDrivers(value);
   };
 
+  const handleClickItem = (item) => {
+    console.log(item);
+  };
+
   if (!driversData) {
     return <div>Loading...</div>;
   }
@@ -35,12 +39,12 @@ const Categories = () => {
       <input placeholder="Search driver.." onChange={handleChange} />
       <div className="cardsContainer">
         {filteredDrivers.map((driver) => (
-          <div className="driverContainer" key={driver.rank}>
+          <button className="driverContainer" key={driver.rank} type="button" onClick={() => handleClickItem(driver.rank)}>
             <TbHelmet />
             <p>{`${driver.firstname} ${driver.lastname}`}</p>
             <p>{`Rank: ${driver.rank}`}</p>
             <p>{`Points: ${driver.points}`}</p>
-          </div>
+          </button>
         ))}
       </div>
     </>
