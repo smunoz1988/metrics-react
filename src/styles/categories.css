@@ -21,6 +21,7 @@
   background-image: radial-gradient(circle at 1px 1px, rgb(104, 102, 102) 0.5px, transparent 0);
   background-size: 5px 5px;
   padding-bottom: 1rem;
+  cursor: pointer;
 }
 
 .driverContainer:nth-child(1),
