@@ -1,35 +1,49 @@
-import { useSelector } from 'react-redux';
-import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
 import { TbHelmet } from 'react-icons/tb';
+import { getCategories } from '../redux/categories/categoriesSlice';
+import '../styles/categories.css';
 
 const Categories = () => {
-  const categoriesData = useSelector((store) => store.category);
-  const driversData = categoriesData.categories?.drivers;
-  const [filterDrivers, setFilterDrivers] = useState(driversData);
+  const dispatch = useDispatch();
+  const driversData = useSelector((store) => store.category?.categories?.drivers);
+  const [filterDrivers, setFilterDrivers] = useState('');
+
+  useEffect(() => {
+    dispatch(getCategories());
+  }, [dispatch]);
 
   const handleChange = (event) => {
     const { value } = event.target;
     setFilterDrivers(value);
   };
 
-  const filteredDrivers = driversData.filter((driver) => driver.toLowerCase().includes(filterDrivers.toLowerCase()));
-
-  if (!filteredDrivers) {
+  if (!driversData) {
     return <div>Loading...</div>;
   }
 
+  const filteredDrivers = driversData.filter((driver) => {
+    const lowercaseFirstName = driver.firstname.toLowerCase();
+    const lowercaseLastName = driver.lastname.toLowerCase();
+    const lowercaseFilter = filterDrivers.toLowerCase();
+
+    return lowercaseFirstName.includes(lowercaseFilter) || lowercaseLastName.includes(lowercaseFilter);
+  });
+
   return (
-    <div>
+    <>
       <input placeholder="Search driver.." onChange={handleChange} />
-      {filteredDrivers.map((driver) => (
-        <div key={driver.rank}>
-          <TbHelmet />
-          <p>{`${driver.firstname} ${driver.lastname}`}</p>
-          <p>{`Rank: ${driver.rank}`}</p>
-          <p>{`Points: ${driver.points}`}</p>
-        </div>
-      ))}
-    </div>
+      <div className="cardsContainer">
+        {filteredDrivers.map((driver) => (
+          <div className="driverContainer" key={driver.rank}>
+            <TbHelmet />
+            <p>{`${driver.firstname} ${driver.lastname}`}</p>
+            <p>{`Rank: ${driver.rank}`}</p>
+            <p>{`Points: ${driver.points}`}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 

@@ -1,0 +1,9 @@
+.cardsContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.driverContainer {
+  border: solid black 0.1rem;
+  text-align: center;
+}
