@@ -1,15 +1,16 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { getDetails } from '../redux/details/detailSlice';
 
 const Detail = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const driverInfo = useSelector((store) => store.detail);
+  const driverInfo = useSelector((store) => store.detail?.details?.driverDetails);
+  const { driverId } = useParams();
 
   useEffect(() => {
-    dispatch(getDetails());
+    dispatch(getDetails(driverId));
   }, [dispatch]);
 
   const returntoDrivers = () => {
@@ -20,11 +21,12 @@ const Detail = () => {
     return <div>Loading...</div>;
   }
 
+  console.log('test', driverInfo);
   return (
     <>
       <button type="button" onClick={returntoDrivers}>camisa</button>
       <ul>
-        <li>{driverInfo.details.driverDetails.podiums}</li>
+        <li>{driverInfo.team}</li>
       </ul>
     </>
   );

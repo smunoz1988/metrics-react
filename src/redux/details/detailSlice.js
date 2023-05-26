@@ -7,7 +7,7 @@ const initialState = {
   error: '',
 };
 
-export const getDetails = createAsyncThunk('detail/getDetails', async () => {
+export const getDetails = createAsyncThunk('detail/getDetails', async (driver) => {
   try {
     const config = {
       headers: {
@@ -16,7 +16,7 @@ export const getDetails = createAsyncThunk('detail/getDetails', async () => {
       },
     };
 
-    const url = 'https://fia-formula-1-championship-statistics.p.rapidapi.com/api/drivers/details/maxverstappen';
+    const url = `https://fia-formula-1-championship-statistics.p.rapidapi.com/api/drivers/details/${driver}`;
 
     const resp = await axios.get(url, config);
     return resp.data;
