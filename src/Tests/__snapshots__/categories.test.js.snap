@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Categories Component renders the component with loaded drivers 1`] = `
+<p>
+  Driver Standings
+</p>
+`;
+
+exports[`Categories Component renders the component with loading state 1`] = `
+<div>
+  Loading...
+</div>
+`;

@@ -1,0 +1,73 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ec4c8a;
+  padding: 0 0.8rem;
+}
+
+.backButton {
+  background-color: #ec4c8a;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.setupWheel {
+  padding-left: 1rem;
+}
+
+.titleDriver {
+  display: flex;
+  background-color: #fb5192;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  background-image: radial-gradient(circle at 1px 1px, rgb(104, 102, 102) 0.5px, transparent 0);
+  background-size: 5px 5px;
+}
+
+.loadingStatus {
+  color: black;
+}
+
+.helmetDriversDetail {
+  font-size: 4.5rem;
+  filter: brightness(35%);
+  padding-left: 2rem;
+}
+
+.nameDataDriver {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: end;
+}
+
+.driverTopData {
+  margin: 0;
+}
+
+.statsTitle {
+  background-color: #ec4c8a;
+  margin: 0;
+  font-size: 0.8rem;
+  padding: 0.2rem 0;
+}
+
+.detailDataContainer {
+  background-image: radial-gradient(circle at 1px 1px, rgb(104, 102, 102) 0.5px, transparent 0);
+  background-size: 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem;
+}
+
+.detailDataContainer:nth-child(odd) {
+  background-color: #ec4c8a;
+}
+
+.detailDataContainer:nth-child(even) {
+  background-color: #d04278;
+}
