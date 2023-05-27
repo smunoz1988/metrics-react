@@ -150,13 +150,6 @@ https://f1-driverstandings-react.onrender.com/
 - Twitter: [@twitterhandle](https://twitter.com/Santiag24209785)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/santiago-munoz-0b2b1a260)
 
-App design by:
-
-👤 Nelson Sakwa.
-
-- Behance: https://www.behance.net/sakwadesignstudio
-- Original Design: https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -189,7 +182,10 @@ If you like this project star it!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank the Microverse team.
+I would like to thank the Microverse team and to App designer, Nelson Sakwa. More info about the designer:
+
+- Behance: https://www.behance.net/sakwadesignstudio
+- Original Design: https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- LICENSE -->
